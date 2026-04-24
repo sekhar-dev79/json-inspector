@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/themes">
+        <file alias="dark.qss">theme/themes/dark.qss</file>
+        <file alias="light.qss">theme/themes/light.qss</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file alias="code-2.svg">icons/svg/code-2.svg</file>
+        <file alias="copy.svg">icons/svg/copy.svg</file>
+        <file alias="git-compare.svg">icons/svg/git-compare.svg</file>
+        <file alias="minimize-2.svg">icons/svg/minimize-2.svg</file>
+        <file alias="moon.svg">icons/svg/moon.svg</file>
+        <file alias="search.svg">icons/svg/search.svg</file>
+        <file alias="sun.svg">icons/svg/sun.svg</file>
+        <file alias="x.svg">icons/svg/x.svg</file>
+        <file alias="app_icon.png">icons/svg/app_icon.png</file>
+    </qresource>
+</RCC>

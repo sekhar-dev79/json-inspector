@@ -1,0 +1,25 @@
+# C++ / Qt Build Artifacts
+build/
+build-*/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+Makefile*
+
+# Qt Creator specific
+*.user
+*.user.*
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Deployment folders
+deploy/
+release/
+debug/

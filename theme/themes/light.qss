@@ -1,0 +1,275 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   JSON Inspector — Light Theme (Amber JSON Brand)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+QWidget {
+    background-color: #FAFAFA;
+    color:            #28251D;
+    font-family:      "Segoe UI", "Inter", "SF Pro Text", sans-serif;
+    font-size:        13px;
+    border:           none;
+    outline:          0;
+}
+
+QMainWindow { background-color: #FAFAFA; }
+
+/* GLOBALLY REMOVE LABEL BACKGROUNDS */
+QLabel { background-color: transparent; }
+
+/* ── Context Menu (Interactive & Polished) ────────────────────────────────── */
+QMenu {
+    background-color: #FFFFFF;
+    border:           1px solid #E0E0E0;
+    border-radius:    4px;
+    padding:          4px 0px;
+}
+QMenu::item {
+    padding:          6px 28px 6px 16px;
+    background-color: transparent;
+    color:            #28251D;
+    cursor:           pointing-hand;
+}
+QMenu::item:selected {
+    background-color: #F5F4F0;
+    color:            #D97706; /* Brand Orange */
+}
+QMenu::separator {
+    height:           1px;
+    background-color: #E0E0E0;
+    margin:           4px 0px;
+}
+
+/* ── Splitter ──────────────────────────────────────────────────────────────── */
+QSplitter::handle { background-color: #E0E0E0; }
+QSplitter::handle:hover { background-color: #D97706; }
+QSplitter::handle:horizontal { width: 1px; }
+QSplitter::handle:vertical { height: 1px; }
+
+/* ── Toolbar ──────────────────────────────────────────────────────────────── */
+#ToolbarWidget {
+    background-color: #F0F0F0;
+    border-bottom:    1px solid #E0E0E0;
+    min-height:       36px;
+    max-height:       36px;
+}
+
+#AppTitleLabel {
+    color:       #28251D;
+    font-size:   13px;
+    font-weight: 600;
+    padding:     0 4px;
+}
+
+#ToolbarSeparator {
+    background-color: #D4D1CA;
+    min-width:        1px; max-width: 1px;
+    min-height:       16px; max-height: 16px;
+    margin:           0 6px;
+}
+
+#ToolbarWidget QPushButton {
+    background-color: transparent;
+    color:            #28251D;
+    border-radius:    4px;
+    padding:          2px 8px;
+    font-size:        12px;
+    font-weight:      500;
+    min-height:       24px;
+    cursor:           pointing-hand;
+}
+#ToolbarWidget QPushButton:hover { background-color: #E0E0E0; color: #D97706; }
+#ToolbarWidget QPushButton:pressed { background-color: #D4D1CA; }
+
+#ValidationIndicator {
+    border-radius: 9px;
+    padding:       2px 8px;
+    font-size:     11px;
+    font-weight:   600;
+    min-height:    18px;
+    max-height:    18px;
+}
+#ValidationIndicator[state="valid"]   { background-color: #E8F5E9; color: #2E5C10; }
+#ValidationIndicator[state="invalid"] { background-color: #FCE4EC; color: #880E4F; }
+#ValidationIndicator[state="empty"]   { background-color: #E0E0E0; color: #7A7974; }
+
+#ThemeToggleButton {
+    background-color: transparent;
+    border-radius:    4px;
+    padding:          4px;
+    min-width:        24px; min-height: 24px;
+    cursor:           pointing-hand;
+}
+#ThemeToggleButton:hover { background-color: #E0E0E0; color: #D97706; }
+
+#CompareButton[active="true"] {
+    background-color: #FEF3C7;
+    color:            #D97706;
+    border:           1px solid #D97706;
+    border-radius:    4px;
+}
+
+/* ── Search Bar ───────────────────────────────────────────────────────────── */
+#SearchBar {
+    background-color: #F0F0F0;
+    border-bottom:    1px solid #E0E0E0;
+    min-height:       32px;
+    max-height:       32px;
+}
+
+#SearchInputWrapper {
+    background-color: #FFFFFF;
+    border:           1px solid #D4D1CA;
+    border-radius:    4px;
+    min-height:       24px;
+    max-height:       24px;
+}
+#SearchInputWrapper[focused="true"] { border-color: #F5A623; }
+
+#SearchLineEdit {
+    background-color: transparent;
+    color:            #28251D;
+    padding:          0 4px;
+    font-size:        12px;
+    selection-background-color: #FDE68A;
+}
+
+#SearchClearButton {
+    background-color: transparent;
+    border-radius:    3px;
+    padding:          2px;
+    min-width:        16px; min-height: 16px;
+    color:            #BAB9B4;
+    cursor:           pointing-hand;
+}
+#SearchClearButton:hover { background-color: #E0E0E0; color: #28251D; }
+
+#MatchCountLabel {
+    color:       #7A7974;
+    font-size:   11px;
+    font-weight: 500;
+    padding:     0 6px;
+}
+#MatchCountLabel[hasMatches="true"] { color: #D97706; }
+#MatchCountLabel[noMatches="true"] { color: #A12C7B; }
+
+/* ── Search Scope Combobox (Interactive) ──────────────────────────────────── */
+#SearchScopeCombo {
+    background-color: transparent;
+    color:            #7A7974;
+    border-radius:    4px;
+    padding:          0 8px;
+    font-size:        11px;
+    font-weight:      500;
+    cursor:           pointing-hand;
+}
+#SearchScopeCombo:hover { background-color: #E0E0E0; color: #28251D; }
+#SearchScopeCombo::drop-down { border: none; width: 16px; }
+
+#SearchScopeCombo QAbstractItemView {
+    background-color: #FFFFFF;
+    color:            #28251D;
+    border:           1px solid #E0E0E0;
+    border-radius:    4px;
+    outline:          none;
+}
+#SearchScopeCombo QAbstractItemView::item {
+    min-height: 24px;
+    padding:    0 8px;
+    cursor:     pointing-hand;
+}
+#SearchScopeCombo QAbstractItemView::item:hover,
+#SearchScopeCombo QAbstractItemView::item:selected {
+    background-color: #F5F4F0;
+    color:            #D97706;
+}
+
+/* ── Input Panel ──────────────────────────────────────────────────────────── */
+#InputPanel {
+    background-color: #FFFFFF;
+    border-right:     1px solid #E0E0E0;
+}
+#JsonInputEditor {
+    background-color: #FFFFFF;
+    color:            #28251D;
+    font-family:      "Cascadia Code", "Fira Code", "Consolas", monospace;
+    font-size:        13px;
+    selection-background-color: #FDE68A;
+}
+#InputPanelFooter {
+    background-color: #F0F0F0;
+    border-top:       1px solid #E0E0E0;
+}
+#CursorPositionLabel { color: #7A7974; font-size: 11px; }
+
+/* ── Tree View (Interactive) ──────────────────────────────────────────────── */
+QTreeView {
+    background-color:            #FFFFFF;
+    alternate-background-color:  #FAFAFA;
+    color:                       #28251D;
+    selection-background-color:  #F5F4F0;
+    show-decoration-selected:    1;
+    outline:                     0;
+}
+QTreeView::item {
+    padding:    2px 4px;
+    min-height: 20px;
+    cursor:     pointing-hand;
+}
+QTreeView::item:hover { background-color: #F0F0F0; }
+QTreeView::item:selected { background-color: #E8E8E8; }
+QTreeView::item:selected:hover { background-color: #E0E0E0; }
+
+QHeaderView {
+    background-color: #F0F0F0;
+    border-bottom:    1px solid #E0E0E0;
+}
+QHeaderView::section {
+    background-color: #F0F0F0;
+    color:            #7A7974;
+    font-size:        10px;
+    font-weight:      600;
+    text-transform:   uppercase;
+    letter-spacing:   0.5px;
+    padding:          2px 6px;
+    border:           none;
+    border-right:     1px solid #E0E0E0;
+    border-bottom:    1px solid #E0E0E0;
+}
+QHeaderView::section:last { border-right: none; }
+QHeaderView::section:hover { background-color: #E8E8E8; cursor: pointing-hand; }
+
+/* ── Scroll Bars ──────────────────────────────────────────────────────────── */
+QScrollBar:vertical { background: transparent; width: 8px; margin: 0px; }
+QScrollBar::handle:vertical { background: #D4D1CA; border-radius: 4px; min-height: 24px; margin: 2px; }
+QScrollBar::handle:vertical:hover { background: #BAB9B4; }
+QScrollBar::handle:vertical:pressed { background: #7A7974; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical, QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical { background: none; height: 0; }
+
+QScrollBar:horizontal { background: transparent; height: 8px; margin: 0px; }
+QScrollBar::handle:horizontal { background: #D4D1CA; border-radius: 4px; min-width: 24px; margin: 2px; }
+QScrollBar::handle:horizontal:hover { background: #BAB9B4; }
+QScrollBar::handle:horizontal:pressed { background: #7A7974; }
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal, QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal { background: none; width: 0; }
+
+/* ── Status Bar ───────────────────────────────────────────────────────────── */
+QStatusBar {
+    background-color: #F0F0F0;
+    color:            #7A7974;
+    font-size:        11px;
+    border-top:       1px solid #E0E0E0;
+    min-height:       22px; max-height: 22px;
+    padding:          0 8px;
+}
+
+/* ── Empty State (Transparent) ────────────────────────────────────────────── */
+#EmptyStateWidget { background-color: transparent; }
+#EmptyStateIcon { color: #E0E0E0; font-size: 28px; }
+#EmptyStateTitle { color: #7A7974; font-size: 13px; font-weight: 500; }
+#EmptyStateSubtitle { color: #BAB9B4; font-size: 11px; }
+
+/* ── Error Banner ─────────────────────────────────────────────────────────── */
+#ErrorBanner { background-color: #FCE4EC; border-bottom: 1px solid #F8BBD0; }
+#ErrorBannerIcon, #ErrorBannerText { color: #880E4F; font-size: 12px; font-weight: 500; }
+#ErrorBannerOffset { color: #AD1457; font-family: "Cascadia Code", monospace; }
+#ErrorBannerDismiss { color: #880E4F; border-radius: 3px; cursor: pointing-hand; }
+#ErrorBannerDismiss:hover { background-color: #F8BBD0; }
